@@ -25,7 +25,7 @@ const Login = (props) => {
             .post("/api/login", formValues)
             .then((res) => {
             localStorage.setItem("token", res.data.payload);
-            history.push("/protected");
+            history.push("/friends");
             })
             .catch((err) => console.log(err))
         setFormValues(initialFormValues)
